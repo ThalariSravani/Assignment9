@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Parameters</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 300px;
+			margin: 50px auto;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Accepted Data:</h2>
+		<label>Username: <span id="username"></span></label>
+		<label>Password: <span id="password"></span></label>
+	</div>
+	
+	<script>
+		
+		const username = sessionStorage.getItem('username');
+		const password = sessionStorage.getItem('password');
+		
+	
+		document.getElementById('username').innerText = username;
+		document.getElementById('password').innerText = password;
+	</script>
+</body>
+</html>
+
+
